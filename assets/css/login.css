@@ -1,0 +1,34 @@
+body{
+	
+	background-color: #2F35CFFF;
+	text-align: center;
+ }	
+.form-login{
+	background-color: #daccccc0;
+	padding: 50px;
+	height: 100%;
+	width: 60%;
+	text-align: center;
+}
+.form-login {
+	 text-align: center;
+	 font-size: 15px;
+}
+@media (max-width: 600px) {
+
+    .form-login {
+		background-color: #ffffffa9;
+		width: 110%;
+		align-items: center;
+		text-align: center;
+    }
+
+} 
+.container {
+	padding: 10%;
+	text-align: center;
+}
+input{
+	background-color: #FFFFFF55;!important
+	text-align: center;
+}
