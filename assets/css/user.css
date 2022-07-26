@@ -1,7 +1,10 @@
-a img{
-	height: 60px;
-	width: 100%;
+.col-md-4 .form-control{
+	color: rgb(224, 221, 221);
 }
-.form-control{
-	margin-top: 10px;
+.dropdown .form-group{
+	
+	color: rgb(224, 221, 221);
+}
+.dropdown .form-group option{
+	color: rgb(55, 55, 55);
 }
