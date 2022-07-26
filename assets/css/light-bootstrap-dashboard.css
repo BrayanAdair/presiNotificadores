@@ -271,7 +271,7 @@ input:focus {
 }
 
 .sidebar .logo {
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -286,7 +286,7 @@ input:focus {
 
 .sidebar .logo .simple-text {
     text-transform: uppercase;
-    padding: 5px 0px;
+    /* padding: 5px 0px; */
     display: block;
     font-size: 18px;
     color: #FFFFFF;
@@ -305,10 +305,10 @@ input:focus {
     overflow: hidden;
 }
 
-.sidebar .logo-tim img {
+/* .sidebar .logo-tim img {
     width: 60px;
     height: 60px;
-}
+} */
 
 .sidebar .nav {
     margin-top: 20px;
@@ -368,11 +368,11 @@ input:focus {
     position: absolute;
     right: 30px;
 }
-
+/* 
 .sidebar .logo {
     padding: 10px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+} */
 
 .sidebar .logo p {
     float: left;
