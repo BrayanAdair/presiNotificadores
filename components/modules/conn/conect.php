@@ -1,15 +1,11 @@
 <?php
-    $serverName = "brayan-server.database.windows.net"; // update me
-    $connectionInfo = array(
-        "Database" => "db_comercios", // update me
-        "Uid" => "brayan-server", // update me
-        "PWD" => "Root-adair" // update me
-    );
-    $conn = sqlsrv_connect($serverName, $connectionInfo);
-   
-    if ($conn){
-        echo ("conexion buena");
-    }else{
-        echo("no se conecto padrino");
-    }
+$connectionInfo = array("UID" => "brayan-server", "pwd" => "{Root-adair}", "Database" => "db_comercios", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:brayan-server.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+
+    if( $conn ) {
+        echo "Conexión establecida con el servidor.<br />";
+   }else{
+        echo "La Conexión no se pudo establecer.<br />";
+   }
 ?>

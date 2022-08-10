@@ -102,6 +102,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <h1>aqui va la tabla</h1>
+                    <?php
+                    include_once 'components/modules/conn/conect.php';
+                        $q = "SELECT * FROM  [dbo].[infodatausers]";
+                        $stmt = sqlsrv_query( $conn, $q );
+                        if( $stmt === false) {
+                        die( print_r( sqlsrv_errors(), true) );
+                    }
+                    while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
+                      echo $row[0].", ".$row[1]."<br />";
+                    }
+                    sqlsrv_free_stmt( $stmt);
+                ?>
                 </div>
             </div>
         </div>
