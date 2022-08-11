@@ -145,19 +145,19 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>RFC (Opcional)</label>
-                                                <input type="text" class="form-control" placeholder="escribe el RFC" name="RFC" minlength="13" maxlength="13">
+                                                <input type="text" required class="form-control" placeholder="escribe el RFC" name="RFC" minlength="13" maxlength="13">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Ap.Paterno</label>
-                                                <input type="text" class="form-control" placeholder="Escribe el apellido paterno" name="Ap_paterno" minlength="2" maxlength="20">
+                                                <input type="text" required class="form-control" placeholder="Escribe el apellido paterno" name="Ap_paterno" minlength="2" maxlength="20">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Ap.Materno</label>
-                                                <input type="text" class="form-control" placeholder="Escribe el apellido materno" name="Ap_materno" minlength="2" maxlength="20">
+                                                <input type="text" required class="form-control" placeholder="Escribe el apellido materno" name="Ap_materno" minlength="2" maxlength="20">
                                             </div>
                                         </div>
                                     </div>
@@ -166,13 +166,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nombre(s)</label>
-                                                <input type="text" class="form-control" placeholder="Escribe el nombre" name="nombre" minlength="2" maxlength="30">
+                                                <input type="text" required class="form-control" placeholder="Escribe el nombre" name="nombre" minlength="2" maxlength="30">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Razon Social</label>
-                                                <input type="text" class="form-control" placeholder="Escribe la Razon Social" name="Razon_social" minlength="1" maxlength="50">
+                                                <input type="text" required class="form-control" placeholder="Escribe la Razon Social" name="Razon_social" minlength="1" maxlength="50">
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +181,15 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Domicilio del Negocio</label>
-                                                <input type="text" class="form-control" placeholder="Escribe el domicilio del negocio" name="Domicilio_negocio" minlength="1" maxlength="85">
+                                                <input type="text" required class="form-control" placeholder="Escribe el domicilio del negocio" name="Domicilio_negocio" minlength="1" maxlength="85">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Descripcion del Negocio</label>
+                                                <textarea type="text" required class="form-control" placeholder="Escribe el domicilio del negocio" name="Descripcion" minlength="1" maxlength="200"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -190,21 +198,21 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Fecha de Emision</label>
-                                                <input type="date" class="form-control" 
+                                                <input type="date" required class="form-control" 
                                                 min="2016-01-01" max="2019-12-31" name="fecha_emision">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Fecha de Expiracion</label>
-                                                <input type="date" class="form-control" 
+                                                <input type="date" required class="form-control" 
                                                 min="2020-01-01" max="2026-12-31" name="fecha_expiracion">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group dropdown">
                                                 <label>Estado de Permiso</label><br>
-                                                <select name="estado_permiso" class="form-group" id="status" data-toggle="dropdown" style="margin-top:5%; height: 6%; width: 100%; border-color: #E3E3E3;">
+                                                <select required name="estado_permiso" class="form-group" id="status" data-toggle="dropdown" style="margin-top:5%; height: 6%; width: 100%; border-color: #E3E3E3;">
                                                     <option value="selecciona">Escoje uno</option>
                                                     <option value="Activo">Activo</option>
                                                     <option value="Inactivo">Inactivo</option>
