@@ -47,7 +47,7 @@
                 <li>
                     <a href="admin.html">
                         <i class="pe-7s-user"></i>
-                        <p>Perfil</p>
+                        <p>Formulario</p>
                     </a>
                 </li>
 
@@ -103,14 +103,14 @@
                 <div class="row">
                     <h1>aqui va la tabla</h1>
                     <?php
-                    include_once 'components/modules/conn/conect.php';
-                        $q = "SELECT * FROM  [dbo].[infodatausers]";
+                    include_once 'components/modules/conect.php';
+                        $q = "SELECT * FROM  [dbo].[negocio]";
                         $stmt = sqlsrv_query( $conn, $q );
                         if( $stmt === false) {
                         die( print_r( sqlsrv_errors(), true) );
                     }
                     while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC) ) {
-                      echo $row[0].", ".$row[1]."<br />";
+                      echo $row[0].",    ".$row[1].",    ".$row[2].",    ".$row[3].",    ".$row[4].",    ".$row[5].",    ".$row[6].",    ".$row[7].",    ".$row[8].",    ".$row[9].",    ".$row[10].",    ".$row[11].",fecha de emision-   ".$row[12].", fecha de expiracion-   ".$row[13]."<br />";
                     }
                     sqlsrv_free_stmt( $stmt);
                 ?>
