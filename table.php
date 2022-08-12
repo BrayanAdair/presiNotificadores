@@ -16,8 +16,8 @@
     <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href='https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'> 
 </head>
 <body>
 <div class="wrapper">
@@ -101,6 +101,42 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+                </div>
+                <div class="row">
                     <h1>aqui va la tabla</h1>
                     <?php
                     include_once 'components/modules/conect.php';
@@ -120,15 +156,18 @@
     </div>
 </div>
 </body>
+
     <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="assets/js/ajaxNegocios.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
