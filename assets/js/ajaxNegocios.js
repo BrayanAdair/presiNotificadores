@@ -1,10 +1,12 @@
 $(document).ready(function () {
     $('#example').DataTable({
-        ajax: {
-            url: 'components/modules/data/datos.json',
+        "order": [[ 0, "desc" ]],
+        "ajax": {
+            url: 'components/modules/data/negocios.json',
             dataSrc: ''
         },
         columns: [
+            { data: 'id_negocio' },
             { data: 'razon_social' },
             { data: 'nombre' },
             { data: 'ap_paterno' },
@@ -14,6 +16,7 @@ $(document).ready(function () {
             { data: 'estado_permiso' },
             { data: 'num_licencia' },
             { data: 're_sello' },
+            { data: 'permisos_temporales' },
             { data: 'fecha_emision' },
             { data: 'fecha_expiracion' },
             { data: 'descripcion' },

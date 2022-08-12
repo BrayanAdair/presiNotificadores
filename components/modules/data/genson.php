@@ -1,25 +1,20 @@
-<?php 
+<?php
+unlink('negocios.json');
+
 include_once '../conect.php';
 
-$array = "SELECT * FROM [dbo].[negocio]";
-$stmt = sqlsrv_query( $conn, $array );
+$sql = "SELECT * FROM [dbo].[negocio] FOR JSON AUTO, INCLUDE_NULL_VALUES";
+$stmt = sqlsrv_query( $conn, $sql );
+
 if( $stmt === false) {
     die( print_r( sqlsrv_errors(), true) );
 }
 while( $array = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-      echo $json = json_encode($array);
-      $bytes = file_put_contents("myfile.json", $json); 
-         echo "Los Bytes creados son $bytes";
+      echo $json = ($array);
+      $bytes = file_put_contents("negocios.json", $json,FILE_APPEND | LOCK_EX ); 
+         echo "      Los Bytes creados son $bytes";
 }
 sqlsrv_free_stmt( $stmt);
-// // data strored in array
-// $array = "SELECT * FROM [dbo].[negocio] ORDER BY 1 FOR JSON AUTO, INCLUDE_NULL_VALUES";
 
-// // encode array to json
-// $json = json_encode($array);
-// $bytes = file_put_contents("myfile.json", $json); 
-// echo "Los Bytes creados son $bytes.";
-
+header('Location: /HACK4TID501/table.php');
 ?>
-
-
